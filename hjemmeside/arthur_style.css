@@ -1,0 +1,42 @@
+h1 {text-align : center;}
+p {text-align : center;}
+ul {text-align : center;}
+body {
+    background-color: #EFC03A; /* Dette er min baggrundsfarve */
+    text-align: center;
+}
+img {
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+ul {
+    list-style-position: inside;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+
+
+}
+
+.back_to_homepage{
+    background-color: #5a5a5a;
+    width: fit-content;
+    height: 50px;
+    margin: left;
+    position: absolute;
+    margin-top: 15px;
+    align-content: space-around;
+}
+.link_back_to_homepage{
+    font-size: 20pt;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    align-self: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.back_to_homepage:hover {
+    background-color: #afafaf;
+}

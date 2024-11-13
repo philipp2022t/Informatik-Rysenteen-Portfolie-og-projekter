@@ -5,6 +5,14 @@ body{
     font-size: 50pt;
     text-align: center;
 }
+.homepage_meme_box{
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.homepage_meme{
+    margin: auto;
+}
 .name{
     font-size: 30pt;
 }
@@ -33,9 +41,29 @@ body{
     width: fit-content;
     margin: auto;
 }
-div:hover {
+.link_til_profil_box:hover {
     background-color: #afafaf;
 }
 a:hover {
     color: black;
+}
+.back_to_homepage{
+    background-color: #5a5a5a;
+    width: fit-content;
+    height: 50px;
+    margin: left;
+    position: absolute;
+    margin-top: 15px;
+    align-content: space-around;
+}
+.link_back_to_homepage{
+    font-size: 20pt;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    align-self: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.back_to_homepage:hover {
+    background-color: #afafaf;
 }
