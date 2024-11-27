@@ -37,20 +37,18 @@ body{
     text-align: center;
 }
 .link_til_profil_box{
-    background-color: #5a5a5a;
     width: fit-content;
     margin: auto;
+    display: flex;
 }
-.link_til_profil_box:hover {
-    background-color: #afafaf;
-}
+
 a:hover {
     color: black;
 }
 .back_to_homepage{
-    /*background-color: #5a5a5a;*/
+    background-color: #5a5a5a;
     width: fit-content;
-    /*height: 50px;*/
+    height: 50px;
     margin: left;
     position: absolute;
     margin-top: 15px;
@@ -64,9 +62,9 @@ a:hover {
     align-self: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-/*.back_to_homepage:hover {
+.back_to_homepage:hover {
     background-color: #afafaf;
-}*/
+}
 .link_til_andre_sider {
     display: flex;
     flex-direction: column;
