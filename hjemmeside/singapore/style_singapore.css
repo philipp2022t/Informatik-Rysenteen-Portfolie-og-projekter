@@ -1,0 +1,97 @@
+body {
+    font-family: "Verdana", monospace;
+}
+
+h1 {
+    font-size: 30pt;
+    color: rgb(170, 0, 0);
+}
+
+h2 {
+    color: #002B59;
+}
+
+h3{
+    color: black;
+}
+
+.banner {
+    border: 1px black;
+}
+
+#white {
+    background-color: white;
+}
+
+#red {
+    background-color: red;
+}
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+header {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.rubrik {
+    /*background-color: #7FADF9;*/
+}
+
+section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #7FADF9;
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+:hover #information{
+    background-color: #7FADF9;
+    transition: 200ms;
+}
+
+.underside {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.map {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
