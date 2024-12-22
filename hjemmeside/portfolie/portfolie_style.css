@@ -108,6 +108,9 @@
     text-decoration: none;
     color: white;
     font-size: 15pt;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: block;
 }
 .link_til_projekt:hover{
     text-decoration: underline;
