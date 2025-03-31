@@ -102,6 +102,8 @@
     display: none;
     overflow: hidden;
     border-radius: 0px 0px 10px 10px;
+    display: block;
+    align-items: center;
 }
 
 .link_til_projekt{
@@ -117,4 +119,7 @@
 }
 h3 {
     font-size: 5pt;
+}
+.billede{
+    justify-content: center;
 }

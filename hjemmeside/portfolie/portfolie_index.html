@@ -14,7 +14,7 @@
             <div class="topnav">
             <a href="portfolie_index.html">Home</a>
             <a href="webteknologier.html">Webteknologier</a>
-            <a href="#contact">It-sikkerhed</a>
+            <a href="#contact">Billedmanipulation</a>
           </div>
         </div>
         
@@ -26,13 +26,13 @@
         <div class="container_undersider">
         <div class="underside">
             <h1 class="underside_title">Webteknologier</h1>
-            <button class="accordion">Projekter</button>
+            <button class="accordion">Programmer</button>
             <div class="panel" id="projekter">
                 <a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/hjemmeside/singapore/index_singapore.html">Singapore Guide</a>
                 <a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/hjemmeside/index_.html">The Facebook (første hjemmeside)</a>
             </div>
             <br>
-            <button class="accordion">Singapore Guide</button>
+            <button class="accordion">Projekt: Singapore Guide</button>
                 <div class="panel">
                 <br>
                 <h3 class="underoverskrift">Problem</h3>
@@ -84,7 +84,7 @@
                         der bare er farvet hvidt (for at vise det Singaporeanske flag, derfor kan man ikke se de indsatte hyperlinks). På denne måde er overfladen som man kan trykke for at komme til 
                         den næste underside større, hvilket gør det nemmere at håndtere hjemmesiden.</p>
                     <br>
-                    <img src="billeder_portfolie/kodestump_css.png" alt="css-kodestump" height="450px">
+                    <img src="billeder_portfolie/kodestump_css.png" alt="css-kodestump" height="450px" class="billede">
                     <p>Dette er CSS-koden, der hører til HTML-koden ovenfor og altså sørger for udseendet af menuen i toppen af hjemmesiden. Nu vil jeg gerne forklare hvad der sker linje for linje i 
                         dette stykke CSS-kode:</p>
                     <ol>
@@ -127,7 +127,132 @@
         </div>
         </div>
         
-        
+        <br>
+
+        <div class="container_undersider">
+            <div class="underside">
+        <h1 class="underside_title">Billedmanipulation</h1>
+        <button class="accordion">Programmer</button>
+        <div class="panel" id="projekter">
+            <h3 class="underoverskrift">Links til de forskellige programmer</h3>
+            <ul>
+                <li><a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/billedmanipulation-projekt/index-keyGenerator.html">Generator til tilfældig nøglebillede</a></li>
+                <li><a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/billedmanipulation-projekt/index-kryptering.html">Kryptering</a></li>
+                <li><a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/billedmanipulation-projekt/index-dekryptering.html">Dekryptering</a></li>
+            </ul>
+        </div>
+        <br>
+        <button class="accordion">Projekt: Billedkryptering</button>
+                <div class="panel">
+                <br>
+                <h3 class="underoverskrift">Problem</h3>
+                    <p>Vi fik følgende projektbeskrivelse:</p>
+                    <p>Alle ved at billeder af hvordan verden, og især os selv, ser ud er dybt uinteressante. For at ændre på dette skal I lave et billedbehandlingsprogram.</p>
+                    <p>I skal derfor udvikle et program, der</p>
+                    <ul>
+                        <li>Kan redigere et billede ved manipulation på pixelniveau.</li>
+                        <li>Kan tilføje effekter.</li>
+                    </ul>
+                    <p>I den forbindelse skal I have fokus på brugeren hvor I skal</p>
+                    <ul>
+                        <li>Bestemme hvad der er kerne- og sekundære-faciliteter.</li>
+                        <li>Udføre en brugertest og en tilretning af projektet.</li>
+                    </ul>
+
+                <h3 class="underoverskrift">Vores løsningsforslag</h3>
+                    <p>Vi valgte at lave et program, der kan kryptere og dekryptere billeder. Dette valg baserer på vores vurdering af, at det særligt i nyere tid er blevet mere og mere
+                        relevant, at kunne sende billeder frem og tilbage uden, at udefrakommende kan se disse billeder. Vores projekt knytter dermed til vores forrige forløb omkring It-sikkerhed
+                        og kryptering.</p>
+                    <p>For at opfylde kravene om, at billedet skulle blive "manipuleret" på pixelniveau, valgte vi følgende tilgang til vores krypteringsmetode:</p>
+                    <ul>
+                        <li>Billedet skulle blive krypteret med et andet billede som krypteringskode. Vores krypteringsmetode kan dermed karakteriseres som symmetrisk kryptering.</li>
+                        <li>Billedet skulle blive krypteret ved at kryptere hver enkel pixel. Den overordnede tilgang var for hver pixel i billedet at lægge rød, grøn og blå værdierne af
+                            pixelen sammen med rød, grøn og blå værdierne af den tilsvarende pixel i nøglebilledet. Dette skulle gøres for at skabe en ny pixel, der ikke umiddelbart
+                            kunne genkendes som en del af det oprindelige billede.</li>
+                        <li>For at kunne dekryptere billedet igen, skulle vi vende krypteringsmetoden om. Dekrypteringsprocessen involverede altså at trække rød, grøn og blå værdierne af
+                            nøglebilledets pixel fra de tilsvarende værdier i det krypterede billede. Dette ville genskabe de oprindelige pixelværdier og dermed det oprindelige billede.</li>
+                    </ul>
+
+                <h3 class="underoverskrift">Teorier om kryptering og designvalg</h3>
+                    <p>Det overordnede design for programmet var som følgende:</p>
+                    <ul>
+                        <li>Brugeren skulle kunne indsætte to billeder, et som skulle blive krypteret og et andet som skulle fungere som nøgle. Med en knap skulle det krypterede billede blive
+                            genereret og vist på skærmen.</li>
+                        <li>Med en knap skulle det krypterede billede kunne downloades med navnet 'krypteret_billede.png'. Dette billede skulle nu kunne sendes.</li>
+                        <li>Den anden bruger skulle kunne indsætte både det krypterede billede og nøglebilledet og med en knap skulle dekrypteringen starte og det dekrypterede billede ville
+                            blive vist på skærmen.</li>
+                        <li>Af sikkerhedsmæssige årsager skulle det dektrypterede billede ikke kunne downloades igen, men bare vises på skærmen.</li>
+                    </ul>
+                    <p>Vores første tilgang til krypteringen var at gange alle rgb-værdierne i billedet med en bestemt værdi. Overordnet set satte vi altså bare et filter på alle billedet farver. 
+                        Det var primært ment, at denne tilgang skulle være en test, for at finde ud af om metoden overhovedet var muligt. Det viste sig, at man ikke bare kan lægge en værdi til alle rgb-værdierne, da det ville
+                        give en masse farve-værdier, der ikke var mulige at vise i billedet, da de var over den maksimale værdi på 255. Ved downloadet af det krypterede billede vil alle rgb-værdier
+                        over 255 blive sat ned til 255. Problemet med dette er, at dekryptering ved at trække den bestemte værdi fra igen, ikke ville returnere de oprindelige rgb-værdier i pixelen, 
+                        men en ensfarvede grå pixel.</p>
+                    <p>Derfor valgte vi at bruge modular aritmetik i vores kryptering. Matematikken går i grove træk ud på at finde resten ved en division. Meningen var med denne metode, at alle værdier, 
+                        der kom over 255 ved krypteringen vil blive sat til 0 og resten vil blive tilføjet til den værdi. Dermed vil man kunne trække den samme værdi fra igen ved dekrypteringen og 
+                        regne modulo af denne værdi ud for at få den oprindelige værdi. Mere præcist så metoden ud som følgende:</p>
+                    <img src="billeder_portfolie/kryptering_metode.png" alt="forklaring af krypteringsmetode" height="250px" class="billede">
+                <h3 class="underoverskrift">Kodestumper</h3>
+                    <p>Herunder vil jeg gerne vise nogle kodestumper fra vores program og forklare dem linje for linje:</p>
+                    <img src="billeder_portfolie/kodestump_billedmanipulation_1.png" alt="krypteringskode" height="450px" class="billede">
+                    
+
+                    <p>Dette stykke kode er taget fra krypteringsmetoden og indgår i den del af koden, der genererer det krypterede billede. Nu vil jeg gerne forklare hvad der sker linje for linje i dette stykke kode:</p>
+                    <ol>
+                        <li>Der åbnes for en funktion encrypt</li>
+                        <li>Der dannes et tomt billede som kaldes for det krypterede billede med bredden w og højden h.</li>
+                        <li>Det krypterede billede fyldes med pixels, men da disse ikke har nogle værider endnu er de bare tomme. Pixels skal alligevel loades for at kunne fylde billedet.</li>
+                        <li>Der åbnes en for-løkke, som kører så længe i, at den er mindre end billedets højde. Det vil sige, at den kører så mange gange som der er pixel i højden af billedet.</li>
+                        <li>Der åbnes en for-løkke, som kører så længe j er mindre end billedets bredde. Det vil sige, at den kører så mange gange som der er pixel i bredden af billedet.</li>
+                        <li>Farven af hver enkel krypteret pixel defineres vha. dens r-, g- og b-værdier.</li>
+                        <li>For både r-, g-, og b-værdien gøres følgende:
+                            <ul>
+                                <li>Den tilsvarende pixelværdi i billedet hentes og dens r-, g- og b-værdi gemmes i en variabel.</li>
+                                <li>Den tilsvarende pixelværdi i nøglebilledet hentes og dens r-, g- og b-værdi gemmes i en variabel.</li>
+                                <li>Til disse to trin gøres brug af en ekstern funktion, der samler alle billedets pixelværdier i et langt array. Ud fra dette array kan man vha. i- og j-værdierne og en
+                                    bestemt værdi n (0 for rød, 1 for grøn og 2 for blå) finde den ønskede pixelværdi. Et billede af funktionen er nedenunder men forklares ikke yderligere.</li>
+                                </li>
+                                <li>Pixelværdierne af både billedet og nøglebilledet lægges sammen og der tages modulo 256 af værdien jf. metoden beskrevet ovenfor.</li>
+                            </ul>
+                        </li>
+                        <li>Ved position (i,j) i det krypterede billedet sættes pixel-farven til at være den lige fundne krypterede farve.</li>
+                        <li>Efter løkken er sluttet opdateres hele det krypterede billede med alle den nye pixelværider og bliver tegnet påny på canvaset.</li>
+                    </ol>
+                    <p>Dekrypteringmetoden fungerer på samme måde, også med to løkker og ved at dekryptere farven i hver pixel vha. r-, g- og b-værdierne.</p>
+                    <img src="billeder_portfolie/kodestump_billedmanipulation_2.png" alt="krypteringskode" height="150px" class="billede">
+                <h3 class="underoverskrift">Brugertest</h3>
+                    <p>Vi udførte desuden en brugertest af vores program, hvor vi uden yderligere instrukser gav det til nogle af vores klassekammerater, som selv skulle prøve det af.
+                        Denne test var primært ment som en test af, om vores program var intuitivt og nemt at bruge. Det viste sig, at vores program ikke var så intuitiv at bruge som vi havde håbet.
+                        Dette skyldes nogle bestemte grunde:
+                        <ul>
+                            <li>Vores klassekamerater forstod ikke helt hvordan hele processen konceptuelt var udtænkt. Dette problem kunne løses ved at indsætte en kort beskrivelse af hvordan vi havde
+                                tænkt at man skulle bruge vores program. Her menes der især processen af at sende det til en anden person som så også kunne dekryptere billedet. Men da dette indtilvidere
+                                havde været et projekt med begrænset omfang havde vi ikke endnu udviklet en smart måde at implementere denne ide.
+                            </li>
+                            <li>Vores program har to særlige indskrænkninger:
+                                <ol>
+                                    <li>Billedet som skal krypteres skal have samme dimensioner og samme opløsning som nøglebilledet. Ellers fungerer den ovenfor beskrevne funktion til krypteringen ikke.</li>
+                                    <li>Nøglebilledet skal helst være meget farverrigt og må egentlig ikke have et eget motiv. Da vores krypteringsmetode intilvidere er meget simpelt og kun lægger to
+                                        værdier sammmen (ergo er der ikke noget "tilfældigt element" i det) vil man godt kunne erkende motivet af billedet og nøgle billedet i det krypterede billede.
+                                        Selvom farverne ville blive ændret og det hele måske vil bliver blandet rundt i hinanden, vil mønstre og konturer ikke blive blandet. Og siden vi mennesker er særlig gode
+                                        til at kunne erkende mønstre vil motiverne altså godt kunne ses.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Løsningen til begge disse indskrænkninger har vi tænkt kunne være et ekstra program der danner et nøglebillede, med samme dimensioner som billedet der skal krypteres.
+                                Dette nøglebillede vil have tilfældigt ornede pixels der er meget farverrige og ikke viser noget mønster. Dermed vil man kunne løse både det rent brugerrelaterede men også det
+                                konceptuelle problem.
+                            </li>
+                        </ul>
+                    </p>
+                <h3 class="underoverskrift">Konklusion</h3>
+                    <p>Vi har vist at det sagtens kan lade sig gøre at kryptere et billede. Vores metode opfylder opgavestillingens krav om at manipulere et billede på pixel-niveau. Af brugertesten har
+                        vi draget den vigtige konklusion, at vores program har brug for udvidelser. Disse udvidelser fik vi skrevet efter brugertesten og allerede implementeret i vores program.
+                    </p>
+                    
+            </div>
+        </div>
+        </div>
         <script src="kode_portfolie.js"></script>
     </body>
 </html>
