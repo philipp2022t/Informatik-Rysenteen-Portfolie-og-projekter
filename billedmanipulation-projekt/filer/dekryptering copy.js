@@ -3,7 +3,7 @@ let keyImg;
 
 function preload() {
   keyImg = loadImage('billeder/key.png'); // Nøgle billede
-  krypteretImg = loadImage('billeder/krypteret_billede (5).png'); // Original billede
+  krypteretImg = loadImage('billeder/krypteret_billede test.png'); // Original billede
 }
 
 function setup() {
