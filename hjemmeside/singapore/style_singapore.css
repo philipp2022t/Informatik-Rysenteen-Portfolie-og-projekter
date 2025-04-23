@@ -53,7 +53,7 @@ h3{
   /* Style the navbar links */
   #navbar a {
     float: left;
-    display: block;
+    display: inline;
     color: white;
     text-align: center;
     padding-left: 15px;

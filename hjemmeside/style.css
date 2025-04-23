@@ -69,6 +69,6 @@ a:hover {
 }*/
 .link_til_andre_sider {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: fit-content;
 }

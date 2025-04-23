@@ -253,6 +253,110 @@
             </div>
         </div>
         </div>
+
+        <br>
+
+        <div class="container_undersider">
+            <div class="underside">
+        <h1 class="underside_title">Machine Learning</h1>
+        <button class="accordion">Programmer</button>
+        <div class="panel" id="projekter">
+            <h3 class="underoverskrift">Links til de forskellige programmer</h3>
+            <ul>
+                <li><a class="link_til_projekt" href="https://philipp2022t.github.io/webteknologier/Machine Learning/tm-my-image-model/index.html">Selvkørende bil</a></li>
+            </ul>
+        </div>
+        <br>
+        <button class="accordion">Projekt: Selvkørende bil</button>
+                <div class="panel">
+                <br>
+                <h3 class="underoverskrift">Problem</h3>
+                    <p>Vi fik følgende projektbeskrivelse:</p>
+                    <p>Mange har lovet selvkørende biler! Det er som bekendt ikke helt sket, men unge dygtige hjerner kan måske hjælpe processen lidt på vej. Biler skal kunne navigere 
+                        i et komplekst miljø hvor uforudsete udfordringer kan forekomme, se comma.ai. For at løse denne opgave skal der bygges gode og komplicerede machine learning modeller. 
+                        I skal med udgangspunkt i modellen simpel rullende bold, (Link til koden) udvikle en del af en løsning til selvkørende biler.</p>
+                    <p>Bilen skal med input fra kameraet:</p>
+                    <ul>
+                        <li>Kunne navigere på en virtuel bane.</li>
+                        <li>Kunne stoppe for rødt.</li>
+                    </ul>
+                    <p>I logbogen skal I overveje:</p>
+                    <ul>
+                        <li>Forskellen på kunstig intelligens og sekventiel programmering.</li>
+                        <li>Hvilken rolle kunstig intelligens kan spille i samfundet.</li>
+                    </ul>
+
+                <h3 class="underoverskrift">Vores løsningsforslag</h3>
+                    <p>Vha. Teachable Machine programmet trænede vi en AI til at kunne se forskel på følgende skilter:</p>
+                    <div class="multiple_pictures">
+
+                    </div>
+                    <p>Bilens bevægelse havde følgende koncept:</p>
+                    <ul>
+                        <li>Bilen skulle som udgangspunkt køre med en bestemt hastighed</li>
+                        <li>Som reaktion på de forskellige skilte skulle bilen lave forskellige hændelser</li>
+                        <ul>
+                            <li>Accelerere og deaccelerere</li>
+                            <li>Vende til høre og vende til venstre</li>
+                            <li>Stoppe</li>
+                            <li>Køre baglæns</li>
+                        </ul>
+                        <li>Dermed ville vi altså konceptionelt vise, at en AI kunne køre en bil selv ud fra bestemte visuelle inputs.</li>
+                    </ul>
+                <h3 class="underoverskrift">Teori om kunstig intelligens</h3>
+                    <p>Indenfor overbegrebet af intelligente maskiner/computere skelner man mellem forskellige former: </p>
+                    <ul>
+                        <li>Artificial Intelligence: Computeren efterligner intelligensen af mennesker ved at efterligne menneskers opførsel.
+                            Computeren opfører sig altså blot som et menneske, men er i virkeligheden ikke intelligent.
+                        </li>
+                        <li>Machine Learning: Computeren "lærer" af data og kan på baggrund af læringsprocessen lave handlinger uden at følge et komplekstsæt af regler.
+                            Machine Learning kommer derfor endnu tættere på virkelig intelligens.
+                        </li>
+                        <li>Deep Learning: Vha. machine learning opbygges computeren på samme måde som den menneskelige hjerne, og kan således også agere lignende.
+                            Dette er den højeste grad af kunstig intelligens og tættest på at ligne menneskets intelligens. Mange mener dog at det i virkeligheden ikke er muligt endnu.</li>
+                        </li>
+                    </ul>
+                    <img src="billeder_portfolie/AI-ML-DL.png" height="350px" class="billede">
+                    <p>Der er en grundlæggende forskel mellem kunstig intelligens og sekventiel programmering. Sekventiel programmering beskriver et konkret defineret regelsæt
+                        som computeren skal følge. Fordi regelsættet er diskret, kan computeren kun handle på inputs, der ligger indenfor den definerede ramme af regelsættet.
+                        Computeren kan ikke håndtere inputs der ligger udenfor, eller afviger fra den definerede ramme.
+                        Kunstig intelligens derimod lærer af data at handle baseret på et ikke konkret regelsæt. Programmet lærer at se sammenhænge i dataen og kan derfor handle på inputs, 
+                        der ikke nødvendigvis ligger indenfor den definerede ramme. Dermed er programmet meget mere fleksibelt, hvilket ofte er en fordel i forhold til vores ikke ens lignenden virkelighed.
+                    </p>
+                    <p>I vores tilfælde er kunstig intelligens anvendelig til at kunne erkende bestemte skilte, forhindringer etc. som signaler i omverdenen.
+                        Da et stopskilt ikke altid ser ens ud på et kamerabillede, skal programmet altså lære at erkende et mønster af hvad vi kalder for et stopskilt, for så at kunne erkende det med sit kamera.</p>
+                    <p style="text-decoration: underline;">Refleksioner omkring kunstig intelligens' rolle i samfundet</p>
+                    <p>...[Ikke skrevet endnu]...</p>
+                <h3 class="underoverskrift">Kodestumper</h3>
+                    <p>Herunder vil jeg gerne vise nogle kodestumper fra vores program og forklare dem linje for linje:</p>
+                    <img src="billeder_portfolie/kodestump_machine learning 1.png" alt="kode for at trække modellens forudsigelser ud af modellen" height="250px" class="billede">
+                    <p>Dette stykke koder er taget fra den del af programmet, der sørger for at trække modellens forudsigelser ud af modellen og bruge disse til at styre vores bil. 
+                        Nu vil jeg gerne forklare hvad der sker linje for linje i dette stykke kode:
+                    </p>
+                    <ol>
+                        <li>Der åbnes for en funktion gotResults, der som input tager variablerne error og results, to størrelser der defineres og ændres i en anden del af modellens kode.</li>
+                        <li>Der dannes for en if-statement, der udføres hvis variablen "error" har en værdi.</li>
+                        <li>Hvis if-statementet udføres, printes "error"-variablens værdi i developer-konsolen vha. kommandoen console.error OG</li>
+                        <li>funktionen afsluttes tidligt efter if-statementet, da de ikke vil give mening at behandle resultaterne hvis der opstod en fejl.</li>
+                        <li>If-statmentet lukkes.</li>
+                        <li>Variablen "label" defineres til at være label-værdien (.label) af det første element i modellens array af resultater (results[0]). 
+                            Arrayet af resultater er sorteret efter modellens tillid til at resultatet er rigtigt. Det første element i arrayet vil altid være 
+                            det mest pålidelige og dermed mest sandsynligt til at være det rigtige.</li>
+                        <li>Arrayet af resultater skrives ind i konsolen.</li>
+                        <li>classifyVideo-funktionen kaldes. Dette er den egentlige funktion der kalder modellen til at erkende input-billedet og give en fortolkning af hvad der ses.
+                            Det var classifyVideo-funktionen, der i første omgang kaldede gotResults-funktionen for at behandle de fåede resultater. Nu vil classifyVideo-funktionen igen
+                            tage det næste frame og anaysere dette.
+                        </li>
+                        <li>gotResults-funktionen lukkes</li>
+                    </ol>
+                <h3 class="underoverskrift">Konklusion</h3>
+                    <p>Vi har vist, at det er muligt, at træne en machine-learning-model til at erkende selvlavede vejskilte og på denne baggrund bevæge en fiktiv bil langs en selvtegnet bane.
+                        Dermed har vi konceptuelt bevist, at kunstig intelligens har potentiale til at kunne bruges til at styre biler i virkeligheden på gaden i fremtiden.
+                    </p>
+                    
+            </div>
+        </div>
+        </div>
         <script src="kode_portfolie.js"></script>
     </body>
 </html>
